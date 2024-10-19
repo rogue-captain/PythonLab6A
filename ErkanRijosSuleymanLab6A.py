@@ -75,8 +75,22 @@ print()
 ##################################### 1 #######################################
 
 ##################################### 2 #######################################   
-def sum_value():
+def sum_value(list1):
     
+    sumList = math.sum(list1)
+    
+    return sumList
+
+
+
+def average_value(list1):
+    
+    average = math.average(list1)
+    
+    return average
+    
+
+
 def collect():
     
     num = 0
@@ -90,13 +104,27 @@ def collect():
         list1 += [num]
         
         print("the list: ", list1)
+        
+    return list1
     
     
 
 
 def main(): 
     
-    collect()
+    compileList = collect()
+    print()
+    theSum = sum_value()
+    print()
+    theAverage = average_value
+    print()
+    
+ascList = asc.list1
+
+print("list ascending order sorted: ", ascList)
+    
+    
+    
     
 
     
