@@ -77,7 +77,11 @@ print()
 ##################################### 2 #######################################   
 def sum_value(list1):
     
-    sumList = math.sum(list1)
+    print("*" * 36)
+    
+    sumList = sum(list1)
+    
+    print(f"The sum of the values is: {sumList}")
     
     return sumList
 
@@ -85,7 +89,9 @@ def sum_value(list1):
 
 def average_value(list1):
     
-    average = math.average(list1)
+    average = (sum(list1)) / (len(list1))
+    
+    print(f"The average of the values is: {average}")
     
     return average
     
@@ -99,35 +105,90 @@ def collect():
     
     while num != -1:
         
-        num = int(input("enter an integer please. "))
-                
-        list1 += [num]
+        num = int(input("\nenter an integer please. "))
         
-        print("the list: ", list1)
+        if num != -1:
+                
+            list1 += [num]
+        
+        print("\nthe list: ", list1)
         
     return list1
+
+
+
+def ascSort(list1):
     
+    ascList = sorted(list1)
+
+    print("list ascending order sorted: ", ascList)
+    
+    return ascList
+    
+    
+    
+def decSort(list1):
+    
+    decList = sorted(list1, reverse = True)
+    
+    print("list decending order sorted: ", decList)
+    
+    print()
+    
+    print("*" * 36)
+    
+    return decList
     
 
 
 def main(): 
     
-    compileList = collect()
+    list1 = collect()
     print()
-    theSum = sum_value()
+    sum_value(list1)
     print()
-    theAverage = average_value
+    average_value(list1)
     print()
-    
-ascList = asc.list1
-
-print("list ascending order sorted: ", ascList)
-    
-    
-    
+    ascSort(list1)
+    print()
+    decSort(list1)
+    print()
     
 
     
 main() 
+  
+print()
+
+##################################### 2 #######################################
+
+##################################### 3 #######################################
+
+rainInches = [0, 0.2, 0.22, .16, 0, .31, 0]
+
+def rainfall(rainInches):
     
+    tenthInchList = []
+    
+    for r in rainInches:
+        if r > 0.1:
+            
+           tenthInchList.append(r)
+           
+    print(f"Rain inches greater than 0.1 inches : {tenthInchList}")
+        
+    return tenthInchList
+        
+        
+def main():
+    
+    rainfall(rainInches)
+    
+    
+    
+main()
+           
+
+
+##################################### 3 #######################################  
     
