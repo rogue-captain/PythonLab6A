@@ -164,8 +164,26 @@ print()
 
 ##################################### 3 #######################################
 
-rainInches = [0, 0.2, 0.22, .16, 0, .31, 0]
+rainInches = [0, .2, .22, .16, 0, .31, 0]
 
+
+
+def noRain(rainInches):
+    
+    noRainList = []
+    
+    for n in rainInches:
+        
+        if n == 0:
+        
+            noRainList.append(n)
+            
+    noRainDays = len(noRainList)
+        
+    print(f"{'number of days with no rainfall this week: '} {noRainDays}")
+    
+     
+    
 def rainfall(rainInches):
     
     tenthInchList = []
@@ -175,14 +193,19 @@ def rainfall(rainInches):
             
            tenthInchList.append(r)
            
-    print(f"Rain inches greater than 0.1 inches : {tenthInchList}")
+    print(f"Rain inches greater than 0.1 inches: {tenthInchList}")
+    
+    print()
         
     return tenthInchList
         
+
         
 def main():
     
     rainfall(rainInches)
+    
+    noRain(rainInches)
     
     
     
